@@ -203,7 +203,7 @@ const PortfolioPage = () => {
         {/* Row 1: Social Media Content - Full Width Feature */}
         <div className="relative overflow-hidden rounded-3xl shadow-2xl group bg-gradient-to-br from-gray-50 to-white">
           <img
-            src="NFFF social media.png"
+            src="/NFFF social media.png"
             alt="Social Media Campaign"
             className="w-full h-[500px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-8"
           />
