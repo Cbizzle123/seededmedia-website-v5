@@ -27,58 +27,112 @@ const PortfolioPage = () => {
     }
   ];
 
-  const ProjectCard = ({ project }: { project: ProjectProps }) => {
-    const isFishChipAwards = project.id === '1';
+  const FishChipAwardsProject = () => (
+    <div className="mb-20">
+      {/* Project Header */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center justify-center gap-4 mb-4">
+          <span className="text-sm font-semibold text-green-600 bg-green-100 px-4 py-2 rounded-full">
+            Event Production & Marketing
+          </span>
+          <div className="flex items-center text-gray-500 text-sm">
+            <Calendar className="w-4 h-4 mr-2" />
+            2026
+          </div>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          The National Fish & Chip Awards 2026
+        </h2>
+        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting. Created engaging social media campaigns and magazine features to promote the event and drive ticket sales.
+        </p>
+        <div className="flex flex-wrap gap-3 justify-center mt-6">
+          {['Event Production', 'Live Hosting', 'Social Media', 'Magazine Design', 'Stage Design'].map((tag) => (
+            <span key={tag} className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-lg flex items-center font-medium">
+              <Tag className="w-4 h-4 mr-2" />
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
 
+      {/* Image Gallery */}
+      <div className="space-y-6">
+        {/* Row 1: Large ceremony photo */}
+        <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
+          <img
+            src="/526_PLL_FISH_N_CHIPS_AWARDS_CEREMONY_WINNERS_1258-min.jpg"
+            alt="Fish & Chip Awards Ceremony"
+            className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+
+        {/* Row 2: Host and Stage */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+            <img
+              src="/_DSF5304-min.jpg"
+              alt="Event Host Presentation"
+              className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+            <img
+              src="/cam2_284-min.jpg"
+              alt="Stage Production Setup"
+              className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          </div>
+        </div>
+
+        {/* Row 3: Social Media & Magazine */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+            <img
+              src="/2.jpg"
+              alt="Social Media - Tickets on Sale"
+              className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+              Social Media
+            </div>
+          </div>
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+            <img
+              src="/3.jpg"
+              alt="Magazine Feature - Officially Open"
+              className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+              Magazine Feature
+            </div>
+          </div>
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+            <img
+              src="/Takeaway of the Year - entry.jpg"
+              alt="Social Media - Takeaway Award"
+              className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+              Social Media
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const ProjectCard = ({ project }: { project: ProjectProps }) => {
     return (
       <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
-        <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
-          {isFishChipAwards ? (
-            <div className="w-full h-full grid grid-cols-7 grid-rows-2 gap-1 p-1">
-              <div className="relative overflow-hidden rounded-lg col-span-3">
-                <img
-                  src="/526_PLL_FISH_N_CHIPS_AWARDS_CEREMONY_WINNERS_1258-min.jpg"
-                  alt="Fish & Chip Awards Ceremony"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-lg col-span-2">
-                <img
-                  src="/_DSF5304-min.jpg"
-                  alt="Awards Host Presentation"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-lg col-span-2">
-                <img
-                  src="/2.jpg"
-                  alt="Social Media - Tickets on Sale"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-lg col-span-2">
-                <img
-                  src="/cam2_284-min.jpg"
-                  alt="Stage Production Setup"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-lg col-span-3">
-                <img
-                  src="/3.jpg"
-                  alt="Magazine Feature - Officially Open"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-lg col-span-2">
-                <img
-                  src="/Takeaway of the Year - entry.jpg"
-                  alt="Social Media - Takeaway of the Year"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
-          ) : project.image ? (
+        <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden">
+          {project.image ? (
             <img
               src={project.image}
               alt={project.title}
@@ -91,7 +145,7 @@ const PortfolioPage = () => {
           )}
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
         </div>
-      
+
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
           <span className="text-sm font-medium text-green-600 bg-green-100 px-3 py-1 rounded-full">
@@ -102,15 +156,15 @@ const PortfolioPage = () => {
             {project.date}
           </div>
         </div>
-        
+
         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
           {project.title}
         </h3>
-        
+
         <p className="text-gray-600 mb-4 leading-relaxed">
           {project.description}
         </p>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag) => (
             <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md flex items-center">
@@ -119,9 +173,9 @@ const PortfolioPage = () => {
             </span>
           ))}
         </div>
-        
+
         {project.link && (
-          <a 
+          <a
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -160,14 +214,17 @@ const PortfolioPage = () => {
               </p>
             </div>
 
-            {/* Projects Grid */}
-            {projects.length > 0 ? (
+            {/* Featured Project: Fish & Chip Awards */}
+            <FishChipAwardsProject />
+
+            {/* Other Projects Grid */}
+            {projects.length > 1 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((project) => (
+                {projects.filter(p => p.id !== '1').map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
               </div>
-            ) : (
+            ) : projects.length === 0 ? (
               <div className="text-center py-20">
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <div className="w-12 h-12 border-4 border-green-600 border-dashed rounded-lg"></div>
@@ -185,7 +242,7 @@ const PortfolioPage = () => {
                   <ExternalLink className="w-4 h-4 ml-2" />
                 </a>
               </div>
-            )}
+            ) : null}
 
             {/* Call to Action */}
             {projects.length > 0 && (
