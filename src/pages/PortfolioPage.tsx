@@ -46,7 +46,7 @@ const PortfolioPage = () => {
           <img
             src="/NFCA-Logo-Vector-High-res.pdf copy.png"
             alt="National Fish & Chip Awards Logo"
-            className="h-16 md:h-20 w-auto mx-auto"
+            className="h-32 md:h-40 w-auto mx-auto"
           />
         </div>
 
