@@ -204,7 +204,7 @@ const PortfolioPage = () => {
         <div className="relative overflow-hidden rounded-3xl shadow-2xl group bg-gradient-to-br from-gray-50 to-white">
           <img
             src="/NFFF social media.png"
-            alt="Social Media Campaign"
+            alt="Social Media Campaigns"
             className="w-full h-[500px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-8"
           />
           <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
