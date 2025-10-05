@@ -50,9 +50,9 @@ const PortfolioPage = () => {
           />
         </div>
 
-        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 whitespace-nowrap overflow-hidden text-ellipsis px-4">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 whitespace-nowrap overflow-hidden text-ellipsis px-4">
           The National Fish & Chip Awards 2023-2026
-        </h3>
+        </h2>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
           Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting. Created engaging social media campaigns and magazine features to promote the event and drive ticket sales.
         </p>
