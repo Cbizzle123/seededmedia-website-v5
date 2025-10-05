@@ -40,12 +40,33 @@ const PortfolioPage = () => {
             2023-2026
           </div>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+
+        {/* NFCA Logo */}
+        <div className="mb-4">
+          <img
+            src="/NFCA-Logo-Vector-High-res.pdf copy.png"
+            alt="National Fish & Chip Awards Logo"
+            className="h-16 md:h-20 w-auto mx-auto"
+          />
+        </div>
+
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 whitespace-nowrap overflow-hidden text-ellipsis px-4">
           The National Fish & Chip Awards 2023-2026
         </h2>
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
           Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting. Created engaging social media campaigns and magazine features to promote the event and drive ticket sales.
         </p>
+
+        {/* News Outlets Strip */}
+        <div className="mb-6">
+          <p className="text-sm text-gray-500 mb-3 font-medium">Featured In</p>
+          <img
+            src="/news outlets.png"
+            alt="As featured in major news outlets"
+            className="max-w-3xl w-full mx-auto"
+          />
+        </div>
+
         <div className="flex flex-wrap gap-3 justify-center mt-6">
           {['Event Production', 'Live Hosting', 'Social Media', 'Magazine Design', 'Stage Design'].map((tag) => (
             <span key={tag} className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-lg flex items-center font-medium">
