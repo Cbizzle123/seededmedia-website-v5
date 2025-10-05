@@ -241,7 +241,17 @@ const PortfolioPage = () => {
 
         {/* Row 3: Additional Graphics */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
+            <img
+              src="/portfolio image copy.png"
+              alt="NFFF Marketing Materials"
+              className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+              Marketing Materials
+            </div>
+          </div>
           <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
             <img
               src="/NFFF Industry Standard Fish Fillet and Chip Portion Weights A1 POSTER (2).jpg"
@@ -268,17 +278,7 @@ const PortfolioPage = () => {
               Print Advertisement
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
-            <img
-              src="/image.png"
-              alt="NFFF Educational Material"
-              className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
-              Educational Content
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
