@@ -250,23 +250,9 @@ const PortfolioPage = () => {
           </div>
           <div className="relative overflow-hidden rounded-3xl shadow-xl group bg-gradient-to-br from-gray-50 to-white">
             <img
-              src="/NFFF Industry Standard Fish Fillet and Chip Portion Weights A1 POSTER (2).jpg"
-              alt="Industry Standards Poster"
-              className="w-full h-[450px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
-            />
-            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
-              Industry Standards
-            </div>
-          </div>
-        </div>
-
-        {/* Row 4: Print Advertisement - Single Column */}
-        <div className="max-w-2xl mx-auto">
-          <div className="relative overflow-hidden rounded-3xl shadow-xl group bg-gradient-to-br from-gray-50 to-white">
-            <img
               src="/Half-page ad (5).jpg"
               alt="NFFF Advertisement"
-              className="w-full h-[500px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
+              className="w-full h-[450px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
             />
             <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
               Print Advertisement
