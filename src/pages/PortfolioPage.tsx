@@ -241,8 +241,7 @@ const PortfolioPage = () => {
 
         {/* Row 3: Additional Graphics */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
-           
+
           <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
             <img
               src="/NFFF Industry Standard Fish Fillet and Chip Portion Weights A1 POSTER (2).jpg"
