@@ -47,14 +47,14 @@ const Hero = () => {
               <ArrowRight className="relative z-10 ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
             
-            <button className="group flex items-center text-gray-700 hover:text-green-600 font-semibold text-lg transition-all duration-300">
+            <a href="/portfolio" className="group flex items-center text-gray-700 hover:text-green-600 font-semibold text-lg transition-all duration-300">
               <div className="w-12 h-12 bg-white/90 backdrop-blur-sm shadow-xl rounded-full flex items-center justify-center mr-4 group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110">
                 <Play className="w-5 h-5 text-green-600 ml-0.5" />
               </div>
-              <a href="/portfolio" className="border-b-2 border-transparent group-hover:border-green-600 transition-all duration-300">
+              <span className="border-b-2 border-transparent group-hover:border-green-600 transition-all duration-300">
                 View Our Work
-              </a>
-            </button>
+              </span>
+            </a>
           </div>
           
           {/* Stats */}
