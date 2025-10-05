@@ -90,33 +90,33 @@ const PortfolioPage = () => {
 
         {/* Row 3: Social Media & Magazine */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-900">
             <img
               src="/2.jpg"
               alt="Social Media - Tickets on Sale"
-              className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
               Social Media
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-900">
             <img
               src="/3.jpg"
               alt="Magazine Feature - Officially Open"
-              className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
               Magazine Feature
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-900">
             <img
               src="/Takeaway of the Year - entry.jpg"
               alt="Social Media - Takeaway Award"
-              className="w-full h-[350px] object-cover group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
