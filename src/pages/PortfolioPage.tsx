@@ -15,37 +15,68 @@ interface ProjectProps {
 }
 
 const PortfolioPage = () => {
-  // Template structure - you can replace with your actual projects
   const projects: ProjectProps[] = [
-    // Add your projects here following this structure:
-    // {
-    //   id: '1',
-    //   title: 'Your Project Title',
-    //   category: 'AI Automation',
-    //   description: 'Brief description of the project and results achieved.',
-    //   image: '/path-to-your-image.jpg',
-    //   tags: ['Chatbot', 'React', 'Node.js'],
-    //   date: '2024',
-    //   link: 'https://your-project-link.com'
-    // }
+    {
+      id: '1',
+      title: 'The National Fish & Chip Awards 2026',
+      category: 'Event Production',
+      description: 'Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting for this landmark event.',
+      image: '/portfolio image (2).png',
+      tags: ['Event Production', 'Live Hosting', 'AV Systems', 'Stage Design'],
+      date: '2026',
+    }
   ];
 
-  const ProjectCard = ({ project }: { project: ProjectProps }) => (
-    <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
-      <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden">
-        {project.image ? (
-          <img 
-            src={project.image} 
-            alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <div className="text-green-600 text-lg font-medium">Project Image</div>
-          </div>
-        )}
-        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
-      </div>
+  const ProjectCard = ({ project }: { project: ProjectProps }) => {
+    const isFishChipAwards = project.id === '1';
+
+    return (
+      <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+        <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
+          {isFishChipAwards ? (
+            <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-1 p-1">
+              <div className="relative overflow-hidden rounded-lg">
+                <img
+                  src="/526_PLL_FISH_N_CHIPS_AWARDS_CEREMONY_WINNERS_1258-min.jpg"
+                  alt="Fish & Chip Awards Ceremony"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img
+                  src="/_DSF5304-min.jpg"
+                  alt="Awards Host Presentation"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg">
+                <img
+                  src="/cam2_284-min.jpg"
+                  alt="Stage Production Setup"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg bg-black flex items-center justify-center">
+                <img
+                  src="/NFCA-Logo-Vector-High-res.pdf.png"
+                  alt="National Fish & Chip Awards Logo"
+                  className="w-3/4 h-3/4 object-contain group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+            </div>
+          ) : project.image ? (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-green-600 text-lg font-medium">Project Image</div>
+            </div>
+          )}
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+        </div>
       
       <div className="p-6">
         <div className="flex items-center justify-between mb-3">
@@ -88,7 +119,8 @@ const PortfolioPage = () => {
         )}
       </div>
     </div>
-  );
+    );
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
