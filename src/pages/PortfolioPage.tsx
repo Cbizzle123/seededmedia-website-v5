@@ -198,87 +198,80 @@ const PortfolioPage = () => {
         </div>
       </div>
 
-      {/* Image Gallery */}
-      <div className="space-y-6">
-        {/* Row 1: Membership Materials */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
+      {/* Image Gallery - Modern Grid Layout */}
+      <div className="space-y-8">
+        {/* Row 1: Social Media Content - Full Width Feature */}
+        <div className="relative overflow-hidden rounded-3xl shadow-2xl group bg-gradient-to-br from-gray-50 to-white">
+          <img
+            src="/portfolio image (1).png"
+            alt="Social Media Campaign"
+            className="w-full h-[500px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-8"
+          />
+          <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
+            Social Media Campaign
+          </div>
+        </div>
+
+        {/* Row 2: Membership Materials - Two Column */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl group bg-gradient-to-br from-gray-50 to-white">
             <img
               src="/1.jpg"
               alt="NFFF Membership Materials"
-              className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[450px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
               Membership Materials
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl group bg-gradient-to-br from-gray-50 to-white">
             <img
               src="/2 copy.jpg"
               alt="Training & Quality Accreditation"
-              className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[450px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
               Training Programs
             </div>
           </div>
         </div>
 
-        {/* Row 2: Social Media Content */}
-        <div className="relative overflow-hidden rounded-2xl shadow-2xl group bg-gray-50">
-          <img
-            src="/portfolio image (1).png"
-            alt="Social Media Campaign"
-            className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
-            Social Media Content
-          </div>
-        </div>
-
-        {/* Row 3: Additional Graphics */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
+        {/* Row 3: Marketing Materials - Two Column */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl group bg-gradient-to-br from-gray-50 to-white">
             <img
               src="/portfolio image copy.png"
               alt="NFFF Marketing Materials"
-              className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[450px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
               Marketing Materials
             </div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl group bg-gradient-to-br from-gray-50 to-white">
             <img
               src="/NFFF Industry Standard Fish Fillet and Chip Portion Weights A1 POSTER (2).jpg"
               alt="Industry Standards Poster"
-              className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[450px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
               Industry Standards
             </div>
           </div>
         </div>
 
-        {/* Row 4: Additional Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-50">
+        {/* Row 4: Print Advertisement - Single Column */}
+        <div className="max-w-2xl mx-auto">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl group bg-gradient-to-br from-gray-50 to-white">
             <img
               src="/Half-page ad (5).jpg"
               alt="NFFF Advertisement"
-              className="w-full h-[400px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[500px] object-contain group-hover:scale-[1.02] transition-transform duration-700 p-6"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+            <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md text-gray-900 font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
               Print Advertisement
             </div>
           </div>
-          
         </div>
       </div>
     </div>
@@ -353,49 +346,57 @@ const PortfolioPage = () => {
       <main className="pt-20">
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-16">
+            <div className="mb-24">
               <a
                 href="/"
-                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mb-8 transition-colors"
+                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mb-12 transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Home
               </a>
 
-              {/* About Me Section */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+              {/* About Me Section - Sleek Open Format */}
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-8">
+                  <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-3 tracking-tight">
+                    About Me
+                  </h1>
+                  <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
+                </div>
+
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
                   {/* Profile Image */}
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-green-600 rounded-full blur-xl opacity-20 transform scale-110"></div>
                     <img
                       src="/profile pic (1).jpg"
                       alt="Charlie Bennett"
-                      className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg ring-4 ring-green-50"
+                      className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-2xl ring-4 ring-white"
                     />
                   </div>
 
                   {/* About Text */}
                   <div className="flex-1 text-center md:text-left">
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
                       Charlie Bennett
-                    </h1>
-                    <p className="text-lg text-green-600 font-medium mb-4">
+                    </h2>
+                    <p className="text-xl text-green-600 font-semibold mb-6">
                       Digital Media & Automation Specialist
                     </p>
-                    <p className="text-gray-600 leading-relaxed mb-4">
+                    <p className="text-lg text-gray-600 leading-relaxed mb-6">
                       Based in Leeds, United Kingdom, I specialize in creating innovative digital solutions
                       that transform how businesses operate. With over 5 years of experience in digital media
                       and automation, I help organizations streamline their processes and amplify their impact
                       through intelligent technology.
                     </p>
                     <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                      <span className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium">
+                      <span className="text-sm bg-gradient-to-r from-green-50 to-green-100 text-green-700 px-5 py-2.5 rounded-full font-semibold shadow-sm">
                         5+ Years Experience
                       </span>
-                      <span className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium">
+                      <span className="text-sm bg-gradient-to-r from-green-50 to-green-100 text-green-700 px-5 py-2.5 rounded-full font-semibold shadow-sm">
                         Leeds, UK
                       </span>
-                      <span className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium">
+                      <span className="text-sm bg-gradient-to-r from-green-50 to-green-100 text-green-700 px-5 py-2.5 rounded-full font-semibold shadow-sm">
                         Digital Media
                       </span>
                     </div>
