@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,6 +24,12 @@ const Contact = () => {
     });
   };
 
+  const openVoiceflowChat = () => {
+    if (window.voiceflow && window.voiceflow.chat) {
+      window.voiceflow.chat.open();
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,53 +43,20 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Email</div>
-                    <div className="text-gray-300">hello@seededmedia.com</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Phone</div>
-                    <div className="text-gray-300">+1 (555) 123-4567</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">Location</div>
-                    <div className="text-gray-300">Remote & On-site Services</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-6">
-              <h4 className="text-xl font-bold text-white mb-3">Free Consultation</h4>
-              <p className="text-green-100 mb-4">
-                Schedule a 30-minute strategy session to discuss your automation needs and growth goals.
-              </p>
-              <button className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Book Now
-              </button>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
+          {/* Free Consultation */}
+          <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 flex flex-col justify-center">
+            <h4 className="text-2xl font-bold text-white mb-4">Free Consultation</h4>
+            <p className="text-green-100 mb-6 text-lg leading-relaxed">
+              Schedule a 30-minute strategy session to discuss your automation needs and growth goals. 
+              Our AI assistant will help you get started immediately.
+            </p>
+            <button 
+              onClick={openVoiceflowChat}
+              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg self-start"
+            >
+              Book Now
+            </button>
           </div>
 
           {/* Contact Form */}
