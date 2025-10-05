@@ -1,0 +1,173 @@
+import React from 'react';
+import { ExternalLink, Calendar, Tag, ArrowLeft } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+interface ProjectProps {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  tags: string[];
+  date: string;
+  link?: string;
+}
+
+const PortfolioPage = () => {
+  // Template structure - you can replace with your actual projects
+  const projects: ProjectProps[] = [
+    // Add your projects here following this structure:
+    // {
+    //   id: '1',
+    //   title: 'Your Project Title',
+    //   category: 'AI Automation',
+    //   description: 'Brief description of the project and results achieved.',
+    //   image: '/path-to-your-image.jpg',
+    //   tags: ['Chatbot', 'React', 'Node.js'],
+    //   date: '2024',
+    //   link: 'https://your-project-link.com'
+    // }
+  ];
+
+  const ProjectCard = ({ project }: { project: ProjectProps }) => (
+    <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+      <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden">
+        {project.image ? (
+          <img 
+            src={project.image} 
+            alt={project.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="text-green-600 text-lg font-medium">Project Image</div>
+          </div>
+        )}
+        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+      </div>
+      
+      <div className="p-6">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-sm font-medium text-green-600 bg-green-100 px-3 py-1 rounded-full">
+            {project.category}
+          </span>
+          <div className="flex items-center text-gray-500 text-sm">
+            <Calendar className="w-4 h-4 mr-1" />
+            {project.date}
+          </div>
+        </div>
+        
+        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors">
+          {project.title}
+        </h3>
+        
+        <p className="text-gray-600 mb-4 leading-relaxed">
+          {project.description}
+        </p>
+        
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project.tags.map((tag) => (
+            <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md flex items-center">
+              <Tag className="w-3 h-3 mr-1" />
+              {tag}
+            </span>
+          ))}
+        </div>
+        
+        {project.link && (
+          <a 
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-medium transition-colors"
+          >
+            View Project
+            <ExternalLink className="w-4 h-4 ml-1" />
+          </a>
+        )}
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      
+      <main className="pt-20">
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <a 
+                href="/"
+                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mb-6 transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Back to Home
+              </a>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our Portfolio
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Explore our portfolio of successful AI automation projects, websites, and digital marketing campaigns 
+                that have helped businesses grow and scale efficiently.
+              </p>
+            </div>
+
+            {/* Projects Grid */}
+            {projects.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {projects.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-20">
+                <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-12 h-12 border-4 border-green-600 border-dashed rounded-lg"></div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Portfolio Coming Soon</h3>
+                <p className="text-gray-600 max-w-md mx-auto mb-8">
+                  We're currently updating our portfolio with our latest projects. 
+                  Check back soon to see our amazing work in AI automation and digital marketing.
+                </p>
+                <a 
+                  href="/#contact" 
+                  className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Get In Touch
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            )}
+
+            {/* Call to Action */}
+            {projects.length > 0 && (
+              <div className="text-center mt-16">
+                <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Ready to Start Your Project?
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Let's discuss how we can help you achieve similar results with AI automation and digital marketing.
+                  </p>
+                  <a 
+                    href="/#contact"
+                    className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  >
+                    Start Your Project
+                    <ExternalLink className="w-5 h-5 ml-2" />
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default PortfolioPage;
