@@ -19,10 +19,10 @@ const PortfolioPage = () => {
     {
       id: '1',
       title: 'The National Fish & Chip Awards 2026',
-      category: 'Event Production',
-      description: 'Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting for this landmark event.',
+      category: 'Event Production & Marketing',
+      description: 'Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting. Created engaging social media campaigns and magazine features to promote the event and drive ticket sales.',
       image: '/portfolio image (2).png',
-      tags: ['Event Production', 'Live Hosting', 'AV Systems', 'Stage Design'],
+      tags: ['Event Production', 'Live Hosting', 'Social Media', 'Magazine Design', 'Stage Design'],
       date: '2026',
     }
   ];
@@ -34,33 +34,47 @@ const PortfolioPage = () => {
       <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
         <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden">
           {isFishChipAwards ? (
-            <div className="w-full h-full grid grid-cols-2 grid-rows-2 gap-1 p-1">
-              <div className="relative overflow-hidden rounded-lg">
+            <div className="w-full h-full grid grid-cols-7 grid-rows-2 gap-1 p-1">
+              <div className="relative overflow-hidden rounded-lg col-span-3">
                 <img
                   src="/526_PLL_FISH_N_CHIPS_AWARDS_CEREMONY_WINNERS_1258-min.jpg"
                   alt="Fish & Chip Awards Ceremony"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-lg col-span-2">
                 <img
                   src="/_DSF5304-min.jpg"
                   alt="Awards Host Presentation"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-lg col-span-2">
+                <img
+                  src="/2.jpg"
+                  alt="Social Media - Tickets on Sale"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg col-span-2">
                 <img
                   src="/cam2_284-min.jpg"
                   alt="Stage Production Setup"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="relative overflow-hidden rounded-lg bg-black flex items-center justify-center">
+              <div className="relative overflow-hidden rounded-lg col-span-3">
                 <img
-                  src="/NFCA-Logo-Vector-High-res.pdf.png"
-                  alt="National Fish & Chip Awards Logo"
-                  className="w-3/4 h-3/4 object-contain group-hover:scale-110 transition-transform duration-500"
+                  src="/3.jpg"
+                  alt="Magazine Feature - Officially Open"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="relative overflow-hidden rounded-lg col-span-2">
+                <img
+                  src="/Takeaway of the Year - entry.jpg"
+                  alt="Social Media - Takeaway of the Year"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
             </div>
