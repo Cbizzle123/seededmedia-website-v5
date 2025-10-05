@@ -24,6 +24,15 @@ const PortfolioPage = () => {
       image: '/portfolio image (2).png',
       tags: ['Event Production', 'Live Hosting', 'Social Media', 'Magazine Design', 'Stage Design'],
       date: '2023-2026',
+    },
+    {
+      id: '2',
+      title: 'National Federation of Fish Friers',
+      category: 'Digital Marketing & Design',
+      description: 'Comprehensive digital marketing campaign for the National Federation of Fish Friers. Created engaging social media content, membership materials, and promotional graphics to support the fish and chip industry across the UK.',
+      image: '/portfolio image.png',
+      tags: ['Social Media', 'Graphic Design', 'Content Creation', 'Brand Marketing'],
+      date: '2023-Present',
     }
   ];
 
@@ -143,6 +152,90 @@ const PortfolioPage = () => {
             <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
               Social Media
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const NFFFProject = () => (
+    <div className="mb-20">
+      {/* Project Header */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center justify-center gap-4 mb-4">
+          <span className="text-sm font-semibold text-green-600 bg-green-100 px-4 py-2 rounded-full">
+            Digital Marketing & Design
+          </span>
+          <div className="flex items-center text-gray-500 text-sm">
+            <Calendar className="w-4 h-4 mr-2" />
+            2023-Present
+          </div>
+        </div>
+
+        {/* NFFF Logo */}
+        <div className="mb-4">
+          <img
+            src="/nffflogo (1).svg"
+            alt="National Federation of Fish Friers Logo"
+            className="h-20 md:h-24 w-auto mx-auto"
+          />
+        </div>
+
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          National Federation of Fish Friers
+        </h2>
+        <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+          Comprehensive digital marketing campaign for the National Federation of Fish Friers, supporting the UK's fish and chip industry since 1913. Created engaging social media content, membership materials, and promotional graphics to promote industry standards, training, and community engagement.
+        </p>
+
+        <div className="flex flex-wrap gap-3 justify-center mt-6">
+          {['Social Media', 'Graphic Design', 'Content Creation', 'Brand Marketing'].map((tag) => (
+            <span key={tag} className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-lg flex items-center font-medium">
+              <Tag className="w-4 h-4 mr-2" />
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Image Gallery */}
+      <div className="space-y-6">
+        {/* Row 1: Membership Materials */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+            <img
+              src="/1.jpg"
+              alt="NFFF Membership Materials"
+              className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+              Membership Materials
+            </div>
+          </div>
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+            <img
+              src="/2 copy.jpg"
+              alt="Training & Quality Accreditation"
+              className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+              Training Programs
+            </div>
+          </div>
+        </div>
+
+        {/* Row 2: Social Media Content */}
+        <div className="relative overflow-hidden rounded-2xl shadow-2xl group">
+          <img
+            src="/portfolio image (1).png"
+            alt="Social Media Campaign"
+            className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
+            Social Media Content
           </div>
         </div>
       </div>
@@ -272,10 +365,13 @@ const PortfolioPage = () => {
             {/* Featured Project: Fish & Chip Awards */}
             <FishChipAwardsProject />
 
+            {/* Featured Project: NFFF */}
+            <NFFFProject />
+
             {/* Other Projects Grid */}
-            {projects.length > 1 ? (
+            {projects.length > 2 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.filter(p => p.id !== '1').map((project) => (
+                {projects.filter(p => p.id !== '1' && p.id !== '2').map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
               </div>
