@@ -50,7 +50,7 @@ const PortfolioPage = () => {
           />
         </div>
 
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 whitespace-nowrap overflow-hidden text-ellipsis px-4">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 px-4">
           The National Fish & Chip Awards 2023-2026
         </h2>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
