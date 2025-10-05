@@ -45,15 +45,15 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
           {/* Free Consultation */}
-          <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 flex flex-col justify-center">
-            <h4 className="text-2xl font-bold text-white mb-4">Free Consultation</h4>
+          <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 flex flex-col">
+            <h4 className="text-2xl font-bold text-white mb-6">Free Consultation</h4>
             <p className="text-green-100 mb-6 text-lg leading-relaxed">
               Schedule a 30-minute strategy session to discuss your automation needs and growth goals. 
               Our AI assistant will help you get started immediately.
             </p>
             <button 
               onClick={openVoiceflowChat}
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg self-start"
+              className="bg-white text-green-600 px-10 py-5 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 text-xl shadow-lg hover:shadow-xl transform hover:scale-105 mt-auto"
             >
               Book Now
             </button>
