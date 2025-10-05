@@ -80,7 +80,7 @@ const PortfolioPage = () => {
           </div>
           <div className="relative overflow-hidden rounded-2xl shadow-xl group">
             <img
-              src="/cam2_284-min.jpg"
+              src="/_DSF6758-min.jpg"
               alt="Stage Production Setup"
               className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
