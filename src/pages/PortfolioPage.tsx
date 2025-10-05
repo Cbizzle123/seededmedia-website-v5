@@ -18,12 +18,12 @@ const PortfolioPage = () => {
   const projects: ProjectProps[] = [
     {
       id: '1',
-      title: 'The National Fish & Chip Awards 2026',
+      title: 'The National Fish & Chip Awards 2023-2026',
       category: 'Event Production & Marketing',
       description: 'Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting. Created engaging social media campaigns and magazine features to promote the event and drive ticket sales.',
       image: '/portfolio image (2).png',
       tags: ['Event Production', 'Live Hosting', 'Social Media', 'Magazine Design', 'Stage Design'],
-      date: '2026',
+      date: '2023-2026',
     }
   ];
 
@@ -37,11 +37,11 @@ const PortfolioPage = () => {
           </span>
           <div className="flex items-center text-gray-500 text-sm">
             <Calendar className="w-4 h-4 mr-2" />
-            2026
+            2023-2026
           </div>
         </div>
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          The National Fish & Chip Awards 2026
+          The National Fish & Chip Awards 2023-2026
         </h2>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
           Prestigious awards ceremony celebrating excellence in the fish and chip industry. Delivered comprehensive event production including staging, lighting, AV systems, and live presentation hosting. Created engaging social media campaigns and magazine features to promote the event and drive ticket sales.
