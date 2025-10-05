@@ -218,21 +218,55 @@ const PortfolioPage = () => {
       <main className="pt-20">
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <a 
+            <div className="mb-16">
+              <a
                 href="/"
-                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mb-6 transition-colors"
+                className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mb-8 transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Home
               </a>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Our Portfolio
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Explore our portfolio of successful AI automation projects, websites, and digital marketing campaigns 
-                that have helped businesses grow and scale efficiently.
-              </p>
+
+              {/* About Me Section */}
+              <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                  {/* Profile Image */}
+                  <div className="flex-shrink-0">
+                    <img
+                      src="/profile pic (1).jpg"
+                      alt="Charlie Bennett"
+                      className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg ring-4 ring-green-50"
+                    />
+                  </div>
+
+                  {/* About Text */}
+                  <div className="flex-1 text-center md:text-left">
+                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                      Charlie Bennett
+                    </h1>
+                    <p className="text-lg text-green-600 font-medium mb-4">
+                      Digital Media & Automation Specialist
+                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-4">
+                      Based in Leeds, United Kingdom, I specialize in creating innovative digital solutions
+                      that transform how businesses operate. With over 5 years of experience in digital media
+                      and automation, I help organizations streamline their processes and amplify their impact
+                      through intelligent technology.
+                    </p>
+                    <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                      <span className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium">
+                        5+ Years Experience
+                      </span>
+                      <span className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium">
+                        Leeds, UK
+                      </span>
+                      <span className="text-sm bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium">
+                        Digital Media
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Featured Project: Fish & Chip Awards */}
