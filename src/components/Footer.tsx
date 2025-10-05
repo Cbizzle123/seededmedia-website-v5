@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { Linkedin, Instagram, Dribbble, Palette } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,26 +9,49 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img 
-                src="/portfolio image (2).png" 
-                alt="Seeded Media Logo" 
+              <img
+                src="/portfolio image (2).png"
+                alt="Seeded Media Logo"
                 className="w-10 h-10 rounded-full"
               />
               <span className="text-xl font-bold text-white">Seeded Media</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              Empowering businesses with intelligent automation and strategic digital marketing 
+              Empowering businesses with intelligent automation and strategic digital marketing
               solutions that drive sustainable growth.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
-                <Linkedin className="w-5 h-5 text-gray-400 hover:text-white" />
+              <a
+                href="https://www.instagram.com/seeded_media/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors group"
+              >
+                <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
-                <Twitter className="w-5 h-5 text-gray-400 hover:text-white" />
+              <a
+                href="https://dribbble.com/charlie_bennett"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors group"
+              >
+                <Dribbble className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
               </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors">
-                <Mail className="w-5 h-5 text-gray-400 hover:text-white" />
+              <a
+                href="https://www.behance.net/charliebennett18"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors group"
+              >
+                <Palette className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/charlie-bennett-13b311210/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors group"
+              >
+                <Linkedin className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
               </a>
             </div>
           </div>
