@@ -114,7 +114,7 @@ const PortfolioPage = () => {
           </div>
           <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-900">
             <img
-              src="/Takeaway of the Year - entry.jpg"
+              src="/Social_media.png"
               alt="Social Media - Takeaway Award"
               className="w-full h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
             />
