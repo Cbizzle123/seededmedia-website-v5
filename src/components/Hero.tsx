@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Play } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 md:pt-0">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         {/* Spline 3D Animation */}
@@ -25,12 +25,14 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in-up">
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight tracking-tight text-shadow-lg">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight tracking-tight text-shadow-lg">
             <span className="block">Scale Your Business</span>
-            <span className="block">with</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-700 to-green-800 block mt-2 relative">
-              Smart Automation
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-green-600 to-green-800 rounded-full"></div>
+            <span className="block">
+              with{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-700 to-green-800 relative">
+                Smart Automation
+                <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-green-600 to-green-800 rounded-full"></span>
+              </span>
             </span>
           </h1>
           
