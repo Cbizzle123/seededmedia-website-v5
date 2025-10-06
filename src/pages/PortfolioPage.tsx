@@ -93,7 +93,7 @@ const PortfolioPage = () => {
           <img
             src="/526_PLL_FISH_N_CHIPS_AWARDS_CEREMONY_WINNERS_1258-min.jpg"
             alt="Fish & Chip Awards Ceremony"
-            className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+            className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
@@ -124,7 +124,7 @@ const PortfolioPage = () => {
             <img
               src="/2.jpg"
               alt="Social Media - Tickets on Sale"
-              className="w-full h-[300px] sm:h-[350px] md:h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[400px] sm:h-[450px] md:h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
@@ -135,7 +135,7 @@ const PortfolioPage = () => {
             <img
               src="/3.jpg"
               alt="Magazine Feature - Officially Open"
-              className="w-full h-[300px] sm:h-[350px] md:h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[400px] sm:h-[450px] md:h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
@@ -146,7 +146,7 @@ const PortfolioPage = () => {
             <img
               src="/Social_media.png"
               alt="Social Media - Takeaway Award"
-              className="w-full h-[300px] sm:h-[350px] md:h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[400px] sm:h-[450px] md:h-[500px] object-contain group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-sm bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm">
