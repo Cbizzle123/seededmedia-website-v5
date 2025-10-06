@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, Tag, Search, ArrowRight, ArrowLeft } from 'lucide-react';
 import { blogPosts } from '../data/blogPosts';
 import Header from '../components/Header';
@@ -18,15 +19,18 @@ const BlogPage = () => {
   });
 
   const BlogCard = ({ post, featured = false }: { post: any, featured?: boolean }) => (
-    <article className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${
-      featured ? 'md:col-span-2 lg:col-span-1' : ''
-    }`}>
+    <Link
+      to={`/blog/${post.slug}`}
+      className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden block ${
+        featured ? 'md:col-span-2 lg:col-span-1' : ''
+      }`}
+    >
       <div className={`aspect-video bg-gradient-to-br from-green-100 to-green-200 relative overflow-hidden ${
         featured ? 'md:aspect-[2/1]' : ''
       }`}>
         {post.image ? (
-          <img 
-            src={post.image} 
+          <img
+            src={post.image}
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
@@ -42,7 +46,7 @@ const BlogPage = () => {
           </span>
         </div>
       </div>
-      
+
       <div className="p-6">
         <div className="flex items-center text-gray-500 text-sm mb-3 space-x-4">
           <div className="flex items-center">
@@ -58,17 +62,17 @@ const BlogPage = () => {
             {post.author}
           </div>
         </div>
-        
+
         <h3 className={`font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors ${
           featured ? 'text-2xl' : 'text-xl'
         }`}>
           {post.title}
         </h3>
-        
+
         <p className="text-gray-600 mb-4 leading-relaxed">
           {post.excerpt}
         </p>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {post.tags.slice(0, 3).map((tag: string) => (
             <span key={tag} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md flex items-center">
@@ -77,13 +81,13 @@ const BlogPage = () => {
             </span>
           ))}
         </div>
-        
-        <button className="inline-flex items-center text-green-600 hover:text-green-700 font-medium transition-colors">
+
+        <div className="inline-flex items-center text-green-600 hover:text-green-700 font-medium transition-colors">
           Read More
           <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-        </button>
+        </div>
       </div>
-    </article>
+    </Link>
   );
 
   return (
@@ -94,13 +98,13 @@ const BlogPage = () => {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <a 
-                href="/"
+              <Link
+                to="/"
                 className="inline-flex items-center text-green-600 hover:text-green-700 font-medium mb-6 transition-colors"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Home
-              </a>
+              </Link>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Latest Insights
               </h1>
