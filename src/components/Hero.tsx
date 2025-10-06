@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles, Play } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-8 md:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-2 md:pt-0">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         {/* Spline 3D Animation */}
