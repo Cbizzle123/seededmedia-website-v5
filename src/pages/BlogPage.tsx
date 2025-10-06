@@ -7,14 +7,15 @@ import Footer from '../components/Footer';
 const BlogPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
+  const featuredPosts = blogPosts.filter(post => post.featured);
+
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesSearch;
+    const isNotFeatured = !post.featured || searchTerm.length > 0;
+    return matchesSearch && isNotFeatured;
   });
-
-  const featuredPosts = blogPosts.filter(post => post.featured);
 
   const BlogCard = ({ post, featured = false }: { post: any, featured?: boolean }) => (
     <article className={`group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden ${
