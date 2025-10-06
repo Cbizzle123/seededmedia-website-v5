@@ -100,19 +100,19 @@ const PortfolioPage = () => {
 
         {/* Row 2: Host and Stage */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-900">
             <img
               src="/_DSF5304-min.jpg"
               alt="Event Host Presentation"
-              className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[400px] sm:h-[450px] md:h-[500px] object-contain group-hover:scale-[1.02] transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
-          <div className="relative overflow-hidden rounded-2xl shadow-xl group">
+          <div className="relative overflow-hidden rounded-2xl shadow-xl group bg-gray-900">
             <img
               src="/_DSF6758-min.jpg"
               alt="Stage Production Setup"
-              className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              className="w-full h-[400px] sm:h-[450px] md:h-[500px] object-contain group-hover:scale-[1.02] transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>

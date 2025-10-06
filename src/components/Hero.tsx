@@ -25,9 +25,10 @@ const Hero = () => {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in-up">
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight text-shadow-lg">
-            <span className="block">Scale Your Business with</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-700 to-green-800 block mt-2 relative">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight tracking-tight text-shadow-lg px-2">
+            <span className="block whitespace-nowrap sm:whitespace-normal">Scale Your Business</span>
+            <span className="block whitespace-nowrap sm:whitespace-normal">with</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-700 to-green-800 block mt-2 relative whitespace-nowrap sm:whitespace-normal">
               Smart Automation
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-green-600 to-green-800 rounded-full"></div>
             </span>
