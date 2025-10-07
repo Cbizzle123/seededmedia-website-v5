@@ -14,6 +14,9 @@ const Hero = () => {
 
         {/* White overlay for text readability */}
         <div className="absolute inset-0 bg-white/50 to bg-white/70"></div>
+
+        {/* Cover Spline watermark */}
+        <div className="absolute bottom-0 right-0 w-48 h-16 bg-white/90 z-20"></div>
       </div>
 
       {/* Subtle background elements for depth */}
