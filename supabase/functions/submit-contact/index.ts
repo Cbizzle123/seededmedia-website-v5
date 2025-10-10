@@ -16,11 +16,11 @@ Deno.serve(async (req: Request) => {
   }
 
   try {
-    const { email, message } = await req.json();
+    const { name, email, company, message } = await req.json();
 
-    if (!email || !message) {
+    if (!name || !email || !message) {
       return new Response(
-        JSON.stringify({ error: "Email and message are required" }),
+        JSON.stringify({ error: "Name, email and message are required" }),
         {
           status: 400,
           headers: {
@@ -43,7 +43,9 @@ Deno.serve(async (req: Request) => {
     const { data, error } = await supabase
       .from("contacts")
       .insert({
+        name,
         email,
+        company,
         message,
         status: "unread",
       })
