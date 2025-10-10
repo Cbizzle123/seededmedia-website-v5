@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,12 +10,40 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            message: formData.message
+          }
+        ]);
+
+      if (error) throw error;
+
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+      setTimeout(() => setIsSubmitted(false), 3000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -129,13 +158,17 @@ const Contact = () => {
               
               <button
                 type="submit"
-                disabled={isSubmitted}
+                disabled={isSubmitted || isSubmitting}
                 className="w-full bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitted ? (
                   <>
                     <CheckCircle className="w-5 h-5 mr-2" />
                     Message Sent!
+                  </>
+                ) : isSubmitting ? (
+                  <>
+                    Sending...
                   </>
                 ) : (
                   <>
