@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="animate-fade-in-up">
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 sm:mb-8 leading-tight tracking-tight text-shadow-lg px-2">
-            <span className="block">Scale Your Business</span>
+            <span className="block">Stay Competitive</span>
             <span className="block">
               <span className="text-gray-900">with </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-700 to-green-800 relative inline-block">
