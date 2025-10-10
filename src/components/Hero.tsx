@@ -19,12 +19,6 @@ const Hero = () => {
         <div className="absolute bottom-0 right-0 w-48 h-16 bg-white z-20"></div>
       </div>
 
-      {/* Subtle background elements for depth */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -right-32 w-64 h-64 bg-gradient-to-br from-green-100/20 to-green-200/10 rounded-full animate-float"></div>
-        <div className="absolute bottom-1/4 -left-32 w-80 h-80 bg-gradient-to-br from-green-50/15 to-green-100/10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-      </div>
-
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in-up">
           {/* Main Headline */}
