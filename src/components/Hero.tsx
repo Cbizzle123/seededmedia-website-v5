@@ -35,8 +35,7 @@ const Hero = () => {
           
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-medium text-shadow px-2">
-            Transform your digital presence with AI-driven chatbots, intelligent workflow automation,
-            and data-driven marketing solutions that scale with your ambitions.
+            AI won’t leave us behind unless we stand still. At SeededMedia, we stay on the cutting edge so our clients and partners don’t get left out of the race.
           </p>
           
           {/* CTA Buttons */}
