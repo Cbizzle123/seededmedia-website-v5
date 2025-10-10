@@ -29,7 +29,7 @@ const Services = () => {
     },
     {
       icon: Mail,
-      title: 'Email Outreach/Marketing',
+      title: 'Email Outreach & Marketing',
       description: 'Targeted email campaigns that nurture leads and drive conversions with personalized messaging.',
       features: ['Campaign Design', 'Automation Sequences', 'A/B Testing']
     },
