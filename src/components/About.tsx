@@ -20,15 +20,11 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              At Seeded Media, we believe in the power of intelligent automation to transform 
-              how businesses operate and grow. Our team combines cutting-edge AI technology 
-              with proven marketing strategies to deliver measurable results.
+              They say 'Stop AI! It will take our jobs!' You mean filling in our spreadsheets? Updating our CRM? Dealing with our most common customer queries instantly? Sounds good to me! 
             </p>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              From AI-powered chatbots that never sleep to automated workflows that save hours 
-              of manual work, we help businesses scale efficiently while maintaining the personal 
-              touch that customers love.
+              If you are willing to let go of your tedious, administrative tasks and would rather spend more time dealing with the human side of your job, Smart Technology is for you.  
             </p>
 
             <div className="grid grid-cols-2 gap-6">
