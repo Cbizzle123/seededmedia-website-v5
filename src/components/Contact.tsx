@@ -18,8 +18,8 @@ const Contact = () => {
     try {
       const { createClient } = await import('@supabase/supabase-js');
 
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+      const supabaseUrl = 'https://bsyajnwymxgciedgayav.supabase.co';
+      const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzeWFqbnd5bXhnY2llZGdheWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwNDk3MTQsImV4cCI6MjA3NTYyNTcxNH0.88jTgDkCIe3EDTviSOjqq57PzugV_gSORgYxUq14h-o';
 
       console.log('Supabase URL exists:', !!supabaseUrl);
       console.log('Supabase Key exists:', !!supabaseKey);
