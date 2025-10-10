@@ -24,7 +24,7 @@ const About = () => {
             </p>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              If you are willing to let go of your tedious 'but someone's got to do it' tasks and would prefer to spend more time being a human, Smart Technology is for you.  
+              If you are willing to let go of your tedious 'but someone's got to do it' tasks, we can help.  
             </p>
 
             <div className="grid grid-cols-2 gap-6">
