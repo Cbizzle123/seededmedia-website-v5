@@ -17,9 +17,9 @@ const Services = () => {
     },
     {
       icon: FileText,
-      title: 'Content Systems',
-      description: 'AI-powered content creation and management systems that scale your content production.',
-      features: ['Automated Content Generation', 'Content Scheduling', 'Performance Analytics']
+      title: 'Content Marketing',
+      description: 'Content creation with marketing strategy that scale your outreach and growth.',
+      features: ['Content Generation', 'Content Scheduling', 'Performance Analytics']
     },
     {
       icon: Share2,
@@ -29,15 +29,15 @@ const Services = () => {
     },
     {
       icon: Mail,
-      title: 'Email Marketing',
+      title: 'Email Outreach/Marketing',
       description: 'Targeted email campaigns that nurture leads and drive conversions with personalized messaging.',
       features: ['Campaign Design', 'Automation Sequences', 'A/B Testing']
     },
     {
       icon: Search,
-      title: 'SEO Optimization',
+      title: 'SEO Optimisation',
       description: 'Improve your search rankings and organic visibility with data-driven SEO strategies.',
-      features: ['Keyword Research', 'Technical SEO', 'Content Optimization']
+      features: ['Keyword Research', 'Technical SEO', 'Content Optimisation']
     },
     {
       icon: Globe,
@@ -61,7 +61,7 @@ const Services = () => {
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive digital solutions designed to accelerate your business growth 
+            Comprehensive digital solutions designed to save you time and money
             through intelligent automation and strategic marketing.
           </p>
         </div>
