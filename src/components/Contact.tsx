@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
-import { supabase } from '../lib/supabase';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +16,12 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      const { createClient } = await import('@supabase/supabase-js');
+      const supabase = createClient(
+        import.meta.env.VITE_SUPABASE_URL,
+        import.meta.env.VITE_SUPABASE_ANON_KEY
+      );
+
       const { error } = await supabase
         .from('contact_submissions')
         .insert([
