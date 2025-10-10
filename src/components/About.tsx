@@ -20,7 +20,7 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              They say 'Stop AI! It will take our jobs!' You mean filling in our spreadsheets? Updating our CRM? Dealing with our most common customer queries instantly? Sounds good to me! 
+              AI won’t leave you behind unless you stand still. At SeededMedia, we stay at the cutting edge of technology so our clients and partners don’t get left out of the race.
             </p>
             
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
