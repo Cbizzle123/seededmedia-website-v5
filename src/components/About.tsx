@@ -43,8 +43,7 @@ const About = () => {
               <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-6 mb-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
                 <p className="text-gray-700">
-                  To empower businesses with intelligent automation and strategic digital marketing 
-                  that drives sustainable growth and exceptional customer experiences.
+                  Remove the donkey work from businesses to make work more enjoyable for all. 
                 </p>
               </div>
               
