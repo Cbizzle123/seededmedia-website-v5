@@ -1,4 +1,5 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
+import { createClient } from "npm:@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -30,37 +31,28 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    const airtableApiKey = Deno.env.get("AIRTABLE_API_KEY");
-    const airtableBaseUrl = Deno.env.get("AIRTABLE_BASE_URL");
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
-    if (!airtableApiKey || !airtableBaseUrl) {
-      throw new Error("Missing Airtable configuration");
+    if (!supabaseUrl || !supabaseServiceKey) {
+      throw new Error("Missing Supabase configuration");
     }
 
-    const airtableResponse = await fetch(airtableBaseUrl, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${airtableApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        records: [
-          {
-            fields: {
-              Email: email,
-              Message: message,
-              Status: "false",
-            },
-          },
-        ],
-      }),
-    });
+    const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
-    if (!airtableResponse.ok) {
-      throw new Error("Failed to submit to Airtable");
+    const { data, error } = await supabase
+      .from("contacts")
+      .insert({
+        email,
+        message,
+        status: "unread",
+      })
+      .select()
+      .single();
+
+    if (error) {
+      throw error;
     }
-
-    const data = await airtableResponse.json();
 
     return new Response(JSON.stringify({ success: true, data }), {
       headers: {
