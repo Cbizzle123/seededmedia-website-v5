@@ -43,7 +43,7 @@ const About = () => {
               <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-6 mb-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Our Mission</h3>
                 <p className="text-gray-700">
-                  Remove the donkey work from businesses to make work more enjoyable for all. 
+                 To remove the mind-numbing tasks from businesses so they can focus on the work only humans can do.
                 </p>
               </div>
               
