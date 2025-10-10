@@ -17,23 +17,34 @@ const Contact = () => {
 
     try {
       const { createClient } = await import('@supabase/supabase-js');
-      const supabase = createClient(
-        import.meta.env.VITE_SUPABASE_URL,
-        import.meta.env.VITE_SUPABASE_ANON_KEY
-      );
 
-      const { error } = await supabase
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      console.log('Supabase URL exists:', !!supabaseUrl);
+      console.log('Supabase Key exists:', !!supabaseKey);
+
+      const supabase = createClient(supabaseUrl, supabaseKey);
+
+      const insertData = {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company || '',
+        message: formData.message
+      };
+
+      console.log('Attempting to insert:', insertData);
+
+      const { data, error } = await supabase
         .from('contact_submissions')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email,
-            company: formData.company,
-            message: formData.message
-          }
-        ]);
+        .insert([insertData]);
 
-      if (error) throw error;
+      console.log('Insert response:', { data, error });
+
+      if (error) {
+        console.error('Supabase error details:', error);
+        throw error;
+      }
 
       setIsSubmitted(true);
       setFormData({
@@ -45,7 +56,7 @@ const Contact = () => {
       setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your message. Please try again.');
+      alert(`There was an error submitting your message: ${error instanceof Error ? error.message : 'Unknown error'}`);
     } finally {
       setIsSubmitting(false);
     }
