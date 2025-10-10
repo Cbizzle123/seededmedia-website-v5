@@ -35,7 +35,7 @@ const Hero = () => {
           
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed font-medium text-shadow px-2">
-            AI won’t leave us behind unless we stand still. At SeededMedia, we stay on the cutting edge so our clients and partners don’t get left out of the race.
+            AI won’t leave you behind unless you stand still. At SeededMedia, we stay at the cutting edge of technology so our clients and partners don’t get left out of the race.
           </p>
           
           {/* CTA Buttons */}
