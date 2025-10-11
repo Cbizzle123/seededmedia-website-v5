@@ -370,9 +370,9 @@ const PortfolioPage = () => {
                       Digital Media & Automation Specialist
                     </p>
                     <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                      Based in Leeds, United Kingdom, I specialize in creating innovative digital solutions
+                      Based in Leeds, United Kingdom, I specialise in creating innovative digital solutions
                       that transform how businesses operate. With over 5 years of experience in digital media
-                      and automation, I help organizations streamline their processes and amplify their impact
+                      and automation, I help organisations streamline their processes and amplify their impact
                       through intelligent technology.
                     </p>
                     <div className="flex flex-wrap gap-3 justify-center md:justify-start">
