@@ -1,55 +1,31 @@
 import React from 'react';
-import { Bot, Workflow, FileText, Share2, Mail, Search, Globe, Settings } from 'lucide-react';
+import { Bot, Globe, Workflow, Share2 } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       icon: Bot,
-      title: 'AI Chatbots',
-      description: 'Intelligent conversational AI that handles customer inquiries 24/7, improving response times and customer satisfaction.',
-      features: ['Natural Language Processing', 'Multi-platform Integration', 'Custom Training']
-    },
-    {
-      icon: Workflow,
-      title: 'Workflow Automation',
-      description: 'Streamline repetitive tasks and optimize business processes with smart automation solutions.',
-      features: ['Process Optimization', 'Integration Setup', 'Performance Monitoring']
-    },
-    {
-      icon: FileText,
-      title: 'Content Marketing',
-      description: 'Content creation with marketing strategy that scale your outreach and growth.',
-      features: ['Content Generation', 'Content Scheduling', 'Performance Analytics']
-    },
-    {
-      icon: Share2,
-      title: 'Social Media Management',
-      description: 'Comprehensive social media strategy and management to build your brand presence.',
-      features: ['Content Planning', 'Community Management', 'Analytics & Reporting']
-    },
-    {
-      icon: Mail,
-      title: 'Email Outreach & Marketing',
-      description: 'Targeted email campaigns that nurture leads and drive conversions with personalized messaging.',
-      features: ['Campaign Design', 'Automation Sequences', 'A/B Testing']
-    },
-    {
-      icon: Search,
-      title: 'SEO Optimisation',
-      description: 'Improve your search rankings and organic visibility with data-driven SEO strategies.',
-      features: ['Keyword Research', 'Technical SEO', 'Content Optimisation']
+      title: 'AI Customer Service',
+      description: 'Intelligent AI-powered customer service solutions that handle inquiries 24/7 across chat and phone, improving response times and customer satisfaction.',
+      features: ['AI Chatbots', 'AI Phone Agents', 'Multi-platform Integration', 'Natural Language Processing']
     },
     {
       icon: Globe,
-      title: 'Website Development',
-      description: 'Modern, responsive websites built for performance, user experience, and conversions.',
-      features: ['Custom Design', 'Mobile Optimization', 'Speed Optimization']
+      title: 'Website Development & Maintenance',
+      description: 'Modern, responsive websites built for performance with ongoing support, optimization, and search visibility strategies.',
+      features: ['Custom Website Design', 'SEO Optimization', 'GEO Optimization', 'Ongoing Maintenance']
     },
     {
-      icon: Settings,
-      title: 'Website Maintenance',
-      description: 'Ongoing website support, updates, and optimization to keep your site running smoothly.',
-      features: ['Security Updates', 'Performance Monitoring', '24/7 Support']
+      icon: Workflow,
+      title: 'Workflow Automation & Outreach',
+      description: 'Streamline repetitive tasks, optimize business processes, and automate outreach campaigns to save time and scale efficiently.',
+      features: ['Process Automation', 'Email Outreach', 'Lead Nurturing', 'Integration Setup']
+    },
+    {
+      icon: Share2,
+      title: 'Digital Marketing',
+      description: 'Comprehensive digital marketing strategies including social media management, content creation, and campaign optimization.',
+      features: ['Social Media Management', 'Content Creation', 'Campaign Strategy', 'Analytics & Reporting']
     }
   ];
 
@@ -61,8 +37,8 @@ const Services = () => {
             Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive digital solutions designed to save you time and money
-            through intelligent automation and strategic marketing.
+            Intelligent automation solutions designed to save you time and money
+            while scaling your business efficiently.
           </p>
         </div>
 
