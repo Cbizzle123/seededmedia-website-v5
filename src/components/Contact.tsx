@@ -16,34 +16,29 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { createClient } = await import('@supabase/supabase-js');
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-      const supabaseUrl = 'https://bsyajnwymxgciedgayav.supabase.co';
-      const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzeWFqbnd5bXhnY2llZGdheWF2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwNDk3MTQsImV4cCI6MjA3NTYyNTcxNH0.88jTgDkCIe3EDTviSOjqq57PzugV_gSORgYxUq14h-o';
+      const apiUrl = `${supabaseUrl}/functions/v1/send-contact-email`;
 
-      console.log('Supabase URL exists:', !!supabaseUrl);
-      console.log('Supabase Key exists:', !!supabaseKey);
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || '',
+          message: formData.message
+        }),
+      });
 
-      const supabase = createClient(supabaseUrl, supabaseKey);
+      const result = await response.json();
 
-      const insertData = {
-        name: formData.name,
-        email: formData.email,
-        company: formData.company || '',
-        message: formData.message
-      };
-
-      console.log('Attempting to insert:', insertData);
-
-      const { data, error } = await supabase
-        .from('contact_submissions')
-        .insert([insertData]);
-
-      console.log('Insert response:', { data, error });
-
-      if (error) {
-        console.error('Supabase error details:', error);
-        throw error;
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
       }
 
       setIsSubmitted(true);
@@ -53,7 +48,7 @@ const Contact = () => {
         company: '',
         message: ''
       });
-      setTimeout(() => setIsSubmitted(false), 3000);
+      setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
       console.error('Error submitting form:', error);
       alert(`There was an error submitting your message: ${error instanceof Error ? error.message : 'Unknown error'}`);
