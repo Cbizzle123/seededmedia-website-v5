@@ -19,6 +19,10 @@ const Contact = () => {
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
       const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+      if (!supabaseUrl || !supabaseAnonKey) {
+        throw new Error('Supabase configuration is missing. Please check your environment variables.');
+      }
+
       const apiUrl = `${supabaseUrl}/functions/v1/send-contact-email`;
 
       const response = await fetch(apiUrl, {
@@ -35,7 +39,16 @@ const Contact = () => {
         }),
       });
 
-      const result = await response.json();
+      const contentType = response.headers.get('content-type');
+      let result;
+
+      if (contentType && contentType.includes('application/json')) {
+        result = await response.json();
+      } else {
+        const text = await response.text();
+        console.error('Non-JSON response received:', text);
+        throw new Error('The contact form service is not properly configured. Please contact support directly at charlie@seededmedia.co.uk');
+      }
 
       if (!response.ok) {
         throw new Error(result.error || 'Failed to send message');
