@@ -31,9 +31,9 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <img 
-              src="/portfolio image (2).png" 
-              alt="Seeded Media Logo" 
+            <img
+              src="/Seededlogo circle.png"
+              alt="Seeded Media Logo"
               className="w-10 h-10 rounded-full"
             />
             <span className="text-xl font-bold text-gray-900">Seeded Media</span>
